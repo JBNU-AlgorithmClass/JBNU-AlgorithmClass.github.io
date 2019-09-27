@@ -10,8 +10,8 @@ title: Jeonbuk Univ Algorithm Class Team2
 email: OutstandingStrong@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   JBNU Algorithm Class Team2
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://webjeda.com" # the base hostname & protocol for your site
+baseurl: "https://jbnu-algorithmclass.github.io/" # the subpath of your site, e.g. /blog
+url: "https://jbnu-algorithmclass.github.io/" # the base hostname & protocol for your site
 
 
 # Build settings
@@ -19,7 +19,7 @@ markdown: kramdown
 baseurl:
 permalink: /:title/
 
-disqus-shortname: webjeda-demo
+disqus-shortname: Algorithm Team2
 
 
 #compress.html
