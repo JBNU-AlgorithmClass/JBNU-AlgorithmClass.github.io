@@ -22,9 +22,9 @@
 
 I made this code to add 1:n modules when I was doing graduation project.
 
-I downloaded an app at play store which can communicate with bluetooth because I had not enough time to make an app. after I had  checked the communication, I noticed the app could send only char data.
+I downloaded an app at play store which can communicate with bluetooth because I had not enough time to make an app. after I had checked the communication, I noticed the app could send only char data.
 
-I need to change the data since I had to allocate hexadecimal address.
+Since I had to allocate hexadecimal address, I need to change the data.
 
 For example, if user send the text like 29 a8 47 b3 c9, allocate the address as 0x29 0xa8 0x47 0xb3 0xc9
 
@@ -35,10 +35,10 @@ Here is the code.
 
 - - -
 
-
+{% highlight html %}
     char input[15] = {'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z'};
     byte addr[5];
-    
+
     void setup() {
       Serial.begin(9600);
     }
@@ -47,7 +47,7 @@ Here is the code.
       Serial.println("start");
       recevingData(input);
       partChangeData(input);
-  
+
       for(int i=0; i<5; i++){
         Serial.print(addr[i], HEX);
         Serial.print(" ");
@@ -64,7 +64,7 @@ Here is the code.
       bool flag = true;
 
       Serial.println("enter the message");
-      
+
       while(flag){    
         if(Serial.available()){
           if(input[rec_cnt] == 'z'){
@@ -73,7 +73,7 @@ Here is the code.
             data_flag = true;
           }      
         }
-        
+
         if(rec_cnt == strlen(input)){  // if end message were error,     receive message again
           if(input[strlen(input)-1] == 'p')  flag = false;
           else {
@@ -84,7 +84,7 @@ Here is the code.
             Serial.println("end message error");
           }
         }
-        
+
         if(rec_cnt <= strlen(input)-1){
           if(input[rec_cnt-1] == 'p'){
             rec_cnt = 0;
@@ -94,7 +94,7 @@ Here is the code.
             Serial.println("message error");
           }
         }
-    
+
         if((rec_cnt == 3) || (rec_cnt == 6) || (rec_cnt == 9) || (rec_cnt == 12)){
           if(input[rec_cnt-1] != ' '){
             rec_cnt = 0;
@@ -126,10 +126,10 @@ Here is the code.
     byte changeData(char input[]){
       int new_num[2] = {0, 0};
       byte change_data = 0x00;
-    
+
       bool change_error_flag = false;
       bool data_flag = true;
-    
+
       if(data_flag){
         for(int i=0; i<2; i++){
           if(int(input[i]) >= 48 && int(input[i]) <= 57){
@@ -152,7 +152,7 @@ Here is the code.
             break;
           }
         }
-      
+
         int cnt = 0;
         if(!change_error_flag){
           for(int i=0; i<16; i++){
@@ -170,3 +170,4 @@ Here is the code.
       input[1] = 'z';
       return change_data;
     }
+{% endhighlight %}
