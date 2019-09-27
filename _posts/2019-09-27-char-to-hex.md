@@ -1,8 +1,31 @@
-# This is test page.
+# To change char input data to hex output (Arduino)
 
-이 코드는 졸업 프로젝트 당시 사용했던 코드 입니다
+졸업 프로젝트에서 1:n 모듈을 추가하기 위해 생각했던 것이다.
+​
+어플을 만들 시간도 없었기 때문에 블루투스 통신으로 데이터를 주고받을 수 있는 어플을 하나 다운 받았고, 데이터를 확인해본 결과 char 데이터만 보낼 수 있었다.
+​
+그 데이터를 받아서 16진수로 주소를 할당해야했기 때문에 받은 데이터를 변환하는게 필요했다.
+​
+예를들어 사용자가 29 a8 47 b3 c9 이런식으로 보낸다면 이것을 0x29 0xa8 0x47 0xb3 0xc9 이런식으로 바꿔서 주소를 할당하는 것이다.
+​
+만약 입력이 잘못되면 에러 메세지를 띄우고 다시 입력하도록 한다. 데이터의 마지막은 문자 'p'로 구분하게 했다.
+​
+코드는 다음과 같다
 
-this code used for graduation project
+
+
+I made this code to add 1:n modules when I doing graduation project.
+
+I downloaded an app at play store which can communicate with bluetooth because I had not enough time to make an app. after checking the communication, I noticed the app could send only char data.
+
+I need to change the data since I had to allocate hexadecimal address.
+
+For example, if user send the text like 29 a8 47 b3 c9, allocate the address as 0x29 0xa8 0x47 0xb3 0xc9
+
+If there was mistyping, error message is going to appear. And, the user has to type the text again. Also, end of the message was char 'p'
+
+Here is the code.
+
 
 
     char input[15] = {'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z'};
