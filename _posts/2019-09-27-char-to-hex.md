@@ -20,9 +20,9 @@
 
 
 
-I made this code to add 1:n modules when I doing graduation project.
+I made this code to add 1:n modules when I was doing graduation project.
 
-I downloaded an app at play store which can communicate with bluetooth because I had not enough time to make an app. after checking the communication, I noticed the app could send only char data.
+I downloaded an app at play store which can communicate with bluetooth because I had not enough time to make an app. after I had  checked the communication, I noticed the app could send only char data.
 
 I need to change the data since I had to allocate hexadecimal address.
 
