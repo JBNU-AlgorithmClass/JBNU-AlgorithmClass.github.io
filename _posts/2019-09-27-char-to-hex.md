@@ -1,4 +1,4 @@
-# To change char input data to hex output (Arduino)
+# To convert char input data to hex output (Arduino)
 
 
 
@@ -24,7 +24,7 @@ I made this code to add 1:n modules when I was doing graduation project.
 
 I downloaded an app at play store which can communicate with bluetooth because I had not enough time to make an app. after I had checked the communication, I noticed the app could send only char data.
 
-Since I had to allocate hexadecimal address, I need to change the data.
+Since I had to allocate hexadecimal address, I need to convert the data.
 
 For example, if user send the text like 29 a8 47 b3 c9, allocate the address as 0x29 0xa8 0x47 0xb3 0xc9
 
