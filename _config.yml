@@ -6,17 +6,17 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Webjeda Gatok
-email: your-email@domain.com
+title: titleTest
+email: OutstandingStrong@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Gatok is a minimal jekyll theme with a 3d menu bar. 
+  Gatok is a minimal jekyll theme with a 3d menu bar.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://webjeda.com" # the base hostname & protocol for your site
 
 
 # Build settings
 markdown: kramdown
-baseurl: 
+baseurl:
 permalink: /:title/
 
 disqus-shortname: webjeda-demo
@@ -33,16 +33,16 @@ compress_html:
   profile: false
   startings: []
 
-sass: 
+sass:
   style: compressed
 
 analytics: UA-83979019-1
 
 version: 1.0
- 
+
 gems: [jekyll-paginate, jekyll-seo-tag]
 
-  
+
 prose:
   rooturl: ''
   siteurl: 'http://prose.github.io/starter/'
@@ -53,4 +53,3 @@ prose:
     - _config.yml
     - /_layouts
     - /_includes
-
